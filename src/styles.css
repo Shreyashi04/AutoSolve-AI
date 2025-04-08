@@ -1,0 +1,121 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom styles */
+body {
+  @apply font-sans;
+}
+
+/* Terminal styles */
+.terminal {
+  @apply bg-classic-black text-emerald p-4 rounded-md font-mono overflow-auto h-80 transition-all;
+  scrollbar-width: thin;
+  scrollbar-color: #4b5563 #1f2937;
+}
+
+.terminal::-webkit-scrollbar {
+  @apply w-2;
+}
+
+.terminal::-webkit-scrollbar-track {
+  @apply bg-gray-800 rounded;
+}
+
+.terminal::-webkit-scrollbar-thumb {
+  @apply bg-gray-600 rounded hover:bg-gray-500 transition-colors;
+}
+
+.terminal-line {
+  @apply mb-1;
+}
+
+.terminal-line.success {
+  @apply text-green-400;
+}
+
+.terminal-line.error {
+  @apply text-red-400;
+}
+
+.terminal-line.warning {
+  @apply text-yellow-400;
+}
+
+.terminal-line.output {
+  @apply text-blue-200;
+}
+
+/* Terminal cursor blinking effect */
+.terminal-cursor:after {
+  content: "▋";
+  @apply text-emerald animate-pulse;
+}
+
+/* Button styles */
+.btn-primary {
+  @apply bg-deep-blue text-white py-2 px-6 rounded-md font-bold uppercase transition-all
+         duration-200 hover:bg-blue-700 disabled:bg-warm-gray min-w-[140px] text-center;
+}
+
+/* Input styles */
+.input-primary {
+  @apply border border-warm-gray p-3 rounded-md w-full bg-soft-white
+         focus:ring-2 focus:ring-deep-blue focus:outline-none transition-all duration-200;
+}
+
+/* Custom animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.3s ease-out forwards;
+}
+
+/* Loading animation */
+.loading-dots:after {
+  content: '.';
+  animation: dots 1.5s steps(5, end) infinite;
+}
+
+@keyframes dots {
+  0%, 20% { content: '.'; }
+  40% { content: '..'; }
+  60% { content: '...'; }
+  80%, 100% { content: ''; }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .terminal {
+    @apply h-64;
+  }
+  
+  h1 {
+    @apply text-2xl;
+  }
+  
+  h2 {
+    @apply text-xl;
+  }
+  
+  .btn-primary {
+    @apply w-full;
+  }
+}
+
+/* Card styles */
+.card {
+  @apply bg-white p-5 rounded-lg shadow-md transition-all duration-300;
+}
+
+.card:hover {
+  @apply shadow-lg -translate-y-1;
+}
+
+/* Focus styles for accessibility */
+*:focus-visible {
+  @apply outline-none ring-2 ring-deep-blue ring-opacity-70;
+}
