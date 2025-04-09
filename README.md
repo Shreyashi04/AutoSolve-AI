@@ -73,6 +73,7 @@ This will generate executables for your current platform in the `out` directory.
 
 You can try these sample commands to test the application's functionality:
 
+
 - `list files` - Shows files in the current directory
 - `system info` - Displays system information
 - `network` - Shows network configuration
