@@ -96,10 +96,11 @@ Here’s what happens under the hood:
 
 ```python
 # Before
-import numppy  # misspelled
+np.array([10,20])  # misspelled
 
 # After LLM Fix
 import numpy
+np.array([10,20])
 ```
 
 And it will install `numpy` if it's not installed.
