@@ -9,7 +9,7 @@ A desktop tool to automatically fix missing or broken import/module errors in Py
 ---
 ##Demo Video
 
-[Watch the demo](demo.mp4)
+[Watch the demo](https://drive.google.com/file/d/1qvxK2EagNcpF0tb1ozNWUSI7UDFa2Po-/view?usp=drive_link)
 
 ## 🚀 Features
 
