@@ -30,7 +30,7 @@ def load_model():
 def fix_code(model, tokenizer, device, code):
     logger.info("🛠 Generating fixed code using LLM...")
     prompt = f"""
-Fix all import/module errors in this Python code.
+Fix all module errors in this Python code.
 Just return the full corrected code, no explanations.
 
 ### Code:
