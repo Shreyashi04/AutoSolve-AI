@@ -11,6 +11,8 @@ module.exports = {
         'soft-white': '#FFFFFF',
         'warm-gray': '#9CA3AF',
       },
+
+    
       fontFamily: {
         sans: ['Inter', 'Roboto', 'Open Sans', 'sans-serif'],
         mono: ['Source Code Pro', 'Fira Mono', 'monospace'],
